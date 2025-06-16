@@ -66,18 +66,25 @@ The program performs the following tasks:
 ### FIRST sets:
 
 FIRST(E) = { i, ( }
-FIRST(X) = { +, ε }
-FIRST(T) = { i, ( }
-FIRST(Y) = { *, ε }
-FIRST(F) = { i, ( }
 
+FIRST(X) = { +, ε }
+
+FIRST(T) = { i, ( }
+
+FIRST(Y) = { *, ε }
+
+FIRST(F) = { i, ( }
 
 ### FOLLOW sets:
 
 FOLLOW(E) = { ), $ }
+
 FOLLOW(X) = { ), $ }
+
 FOLLOW(T) = { +, ), $ }
+
 FOLLOW(Y) = { +, ), $ }
+
 FOLLOW(F) = { *, +, ), $ }
 
 
