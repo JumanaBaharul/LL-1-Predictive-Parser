@@ -24,10 +24,14 @@ Where:
 
 The grammar is defined as follows:
 
-`E → T X`
-`X → + T X | ε`
+E → T X
+
+X → + T X | ε
+
 T → F Y
+
 Y → * F Y | ε
+
 F → ( E ) | i
 
 - **Non-terminals:** E (expression), X (expression tail), T (term), Y (term tail), F (factor)
