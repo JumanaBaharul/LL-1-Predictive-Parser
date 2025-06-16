@@ -24,15 +24,15 @@ Where:
 
 The grammar is defined as follows:
 
-E → T X
+`E → T X`
 
-X → + T X | ε
+`X → + T X | ε`
 
-T → F Y
+`T → F Y`
 
-Y → * F Y | ε
+`Y → * F Y | ε`
 
-F → ( E ) | i
+`F → ( E ) | i`
 
 - **Non-terminals:** E (expression), X (expression tail), T (term), Y (term tail), F (factor)
 - **Terminals:** `i`, `+`, `*`, `(`, `)`, `$` (end marker)
@@ -65,27 +65,27 @@ The program performs the following tasks:
 
 ### FIRST sets:
 
-FIRST(E) = { i, ( }
+`FIRST(E) = { i, ( }`
 
-FIRST(X) = { +, ε }
+`FIRST(X) = { +, ε }`
 
-FIRST(T) = { i, ( }
+`FIRST(T) = { i, ( }`
 
-FIRST(Y) = { *, ε }
+`FIRST(Y) = { *, ε }`
 
-FIRST(F) = { i, ( }
+`FIRST(F) = { i, ( }`
 
 ### FOLLOW sets:
 
-FOLLOW(E) = { ), $ }
+`FOLLOW(E) = { ), $ }`
 
-FOLLOW(X) = { ), $ }
+`FOLLOW(X) = { ), $ }`
 
-FOLLOW(T) = { +, ), $ }
+`FOLLOW(T) = { +, ), $ }`
 
-FOLLOW(Y) = { +, ), $ }
+`FOLLOW(Y) = { +, ), $ }`
 
-FOLLOW(F) = { *, +, ), $ }
+`FOLLOW(F) = { *, +, ), $ }`
 
 
 ### LL(1) Parsing Table:
